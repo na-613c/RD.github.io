@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/BIS.css">
+    <!-- <link rel="stylesheet" href="fon/Epic-BG-PPSSPP-like--master/css/style.css"> -->
+    <!-- <link rel="stylesheet" href="fon/Epic-BG-PPSSPP-like--master/assets/font-awesome/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="css/fon.css">
+    <link rel="stylesheet" href="css/animated.css">
+
+
+    <script src="js/lib/jquery-1.10.2.min.js"></script>
+    <script src="js/BIS.js"></script>
+
+    <script type="text/javascript" src="https://wowroad.info/power.js"></script>
+    <script>
+      var wowroad_tooltips = {
+        "colorlinks": true,
+        "iconizelinks": true,
+        "renamelinks": true
+      }
+    </script>
+
+<style>
+@media (min-width: 768px) {
+  #myModalOnLoad{
+    z-index: 1;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    background-color: rgba(17, 1, 22, 0.95);
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  #myModalOnLoad{
+    visibility: hidden
+  }
+}
+
+#modalContent{
+    z-index: 2;
+    box-shadow: 0px 1px 10px rgb(255, 255, 255);
+    color: rgb(7, 6, 6);
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    width: 30%;
+    height: 40%;
+    text-align: center;
+    border: 1px solid rgb(253, 253, 253);
+    border-radius: 5px 5px 5px 5px;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#endSpan{
+  position: relative;
+  bottom: 0%;
+}
+
+#closeBtn{
+display: inline-block;
+float: right; 
+}
+#closeBtn:hover{
+  text-shadow: rgb(0, 1, 2) 0px 0px 1px;
+  cursor: pointer
+}
+
+
+#animatedCat {
+  z-index: 2;
+  opacity: 0;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+
+
+
+</style>
+    <link rel="shortcut icon" href="images/RD_New_Logo.png">
+
+    <title> BIS-лист RD</title>
+
+</head>
+
+<body>
+
+    <script>
+    $(document).ready(function () {
+        $('#closeBtn').click(function () {
+            $('#myModalOnLoad').hide();
+        })
+    });
+// cat
+
+setTimeout(animeCat, 3000);
+
+function animeCat(){
+  $(document).ready(function () {
+            $('#animatedCat').fadeTo( "slow" , 1);
+    });
+
+  let start = Date.now();
+
+  let timer = setInterval(function() {
+    let timePassed = Date.now() - start;
+
+    animatedCat.style.right = (timePassed / 5 )+ 'px';
+
+    if (timePassed > 15000) clearInterval(timer);
+
+  }, 100);
+}
+    </script>
+
+      <div id="myModalOnLoad">
+          <div id="modalContent">
+            <h2 style="display: inline-block;">ВНИМАНИЕ!</h2> 
+            <h2 id="closeBtn" >×</h2><br>
+            <span>Если у вас будут не отображаться вещи в бис листах - отключите адблок.</span> <br> <hr>
+            <span id="endSpan">Так же о всех найденных багах пишите в VK 
+              <a href="https://vk.com/id479121650" target="_blanck">https://vk.com/id479121650</a>
+              или в DISCORD   
+              <a href="https://discordapp.com/channels/@me/607682254566719509"  target="_blanck">@◯乂ƤĄツ#6468 </a>
+            </span>
+            
+          </div>
+          <div id="animatedCat">
+            <img src="https://media.giphy.com/media/jf8FsS1JGOXmg/giphy.gif" alt="">
+          </div>
+          <div class="back-shapes">
+            <img src="iconsForFon/circle.png" class="floating" style="top:66.59856996935649%;left:13.020833333333334%;animation-delay:-0.9s;"/>
+            <img src="iconsForFon/triangle.png" class="floating" style="top:31.46067415730337%;left:33.59375%;animation-delay:-4.8s;"/>
+            <img src="iconsForFon/cross.png" class="floating" style="top:76.50663942798774%;left:38.020833333333336%;animation-delay:-4s;"/>
+            <img src="iconsForFon/square.png" class="floating" style="top:21.450459652706844%;left:14.0625%;animation-delay:-2.8s;"/>
+            <img src="iconsForFon/square.png" class="floating" style="top:58.12053115423902%;left:56.770833333333336%;animation-delay:-2.15s;"/>
+            <img src="iconsForFon/square.png" class="floating" style="top:8.682328907048008%;left:72.70833333333333%;animation-delay:-1.9s;"/>
+            <img src="iconsForFon/cross.png" class="floating" style="top:31.3585291113381%;left:58.541666666666664%;animation-delay:-0.65s;"/>
+            <img src="iconsForFon/cross.png" class="floating" style="top:69.96935648621042%;left:81.45833333333333%;animation-delay:-0.4s;"/>
+            <img src="iconsForFon/circle.png" class="floating" style="top:15.117466802860061%;left:32.34375%;animation-delay:-4.1s;"/>
+            <img src="iconsForFon/circle.png" class="floating" style="top:13.074565883554648%;left:45.989583333333336%;animation-delay:-3.65s;"/>
+            <img src="iconsForFon/cross.png" class="floating" style="top:55.87334014300306%;left:27.135416666666668%;animation-delay:-2.25s;"/>
+            <img src="iconsForFon/cross.png" class="floating" style="top:49.54034729315628%;left:53.75%;animation-delay:-2s;"/>
+            <img src="iconsForFon/cross.png" class="floating" style="top:34.62717058222676%;left:49.635416666666664%;animation-delay:-1.55s;"/>
+            <img src="iconsForFon/cross.png" class="floating" style="top:33.19713993871297%;left:86.14583333333333%;animation-delay:-0.95s;"/>
+            <img src="iconsForFon/square.png" class="floating" style="top:28.19203268641471%;left:25.208333333333332%;animation-delay:-4.45s;"/>
+            <img src="iconsForFon/circle.png" class="floating" style="top:39.7344228804903%;left:10.833333333333334%;animation-delay:-3.35s;"/>
+            <img src="iconsForFon/triangle.png" class="floating" style="top:77.83452502553627%;left:24.427083333333332%;animation-delay:-2.3s;"/>
+            <img src="iconsForFon/triangle.png" class="floating" style="top:2.860061287027579%;left:47.864583333333336%;animation-delay:-1.75s;"/>
+            <img src="iconsForFon/triangle.png" class="floating" style="top:71.3993871297242%;left:66.45833333333333%;animation-delay:-1.25s;"/>
+            <img src="iconsForFon/triangle.png" class="floating" style="top:31.256384065372828%;left:76.92708333333333%;animation-delay:-0.65s;"/>
+            <img src="iconsForFon/triangle.png" class="floating" style="top:46.47599591419816%;left:38.90625%;animation-delay:-0.35s;"/>
+            <img src="iconsForFon/cross.png" class="floating" style="top:3.4729315628192032%;left:19.635416666666668%;animation-delay:-4.3s;"/>
+            <img src="iconsForFon/cross.png" class="floating" style="top:3.575076608784474%;left:6.25%;animation-delay:-4.05s;"/>
+            <img src="iconsForFon/cross.png" class="floating" style="top:77.3237997957099%;left:4.583333333333333%;animation-delay:-3.75s;"/>
+            <img src="iconsForFon/cross.png" class="floating" style="top:0.9193054136874361%;left:71.14583333333333%;animation-delay:-3.3s;"/>
+            <img src="iconsForFon/square.png" class="floating" style="top:23.6976506639428%;left:63.28125%;animation-delay:-2.1s;"/>
+            <img src="iconsForFon/square.png" class="floating" style="top:81.30745658835546%;left:45.15625%;animation-delay:-1.75s;"/>
+            <img src="iconsForFon/square.png" class="floating" style="top:60.9805924412666%;left:42.239583333333336%;animation-delay:-1.45s;"/>
+            <img src="iconsForFon/square.png" class="floating" style="top:29.009193054136876%;left:93.90625%;animation-delay:-1.05s;"/>
+            <img src="iconsForFon/square.png" class="floating" style="top:52.093973442288046%;left:68.90625%;animation-delay:-0.7s;"/>
+            <img src="iconsForFon/square.png" class="floating" style="top:81.51174668028601%;left:83.59375%;animation-delay:-0.35s;"/>
+            <img src="iconsForFon/square.png" class="floating" style="top:11.542390194075587%;left:91.51041666666667%;animation-delay:-0.1s;"/>
+        </div>
+
+
+      </div>
+      
+
+
+    <div class="mainDiv" id="main">
+        <div class="row rowF">
+            <h2 style="display: inline-block;" onclick="return location.href = 'index.html'">Running Death</h2>
+            <div style="display: inline-block; float: right; ">
+                <div class=" button-prev button" onclick="return location.href = 'index.html'">
+                    <span class="btnText">на главную</span>
+                    <div class="btnTwo">
+                        <span class="btnText2"><
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+        <div class="centerText">
+            <div class="row rowF">
+                <p class="text-for-question">На какой класс Вам нужен БИС-лист ?</p>
+            </div>
+            <!-- ТКАНЬ -->
+            <div class="row">
+                <div class="col-sm-4">
+                    <!--col-lg-4 col-sm-12  -->
+                    <div class="button mage-button"><span>маг</span></div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="button prist-button"><span>Жрец</span></div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="button lock-button"><span>Чернокниник</span></div>
+                </div>
+            </div>
+            <!-- КОЖА и КОЛЬЧУГА -->
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="button dru-button"><span>друид</span></div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="button rog-button"><span>разбойник</span></div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="button hunt-button"><span>охотник</span></div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="button sham-button"><span>шаман</span></div>
+                </div>
+            </div>
+            <!-- ЛАТЫ -->
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="button war-button"><span>воин</span></div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="button pal-button"><span>паладин</span></div>
+                </div>
+                <div class="col-sm-4">
+                    <div class=" dk-button button "><span>рыцарь смерти</span></div>
+                </div>
+            </div>
+            <footer>
+                    <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+                    <p class="RD">🆁🆄🅽🅽🅸🅽🅶 🅳🅴🅰🆃🅷</p>
+                    <p style="display: inline-block; float: right; ">by OXPA</p>
+            </footer>
+        </div>
+
+
+    </div>
+
+
+                                                            <!-- MAGE -->
+<div class="mainDiv" id="mage" hidden>
+        <div class="row rowF">
+            <h2 style="display: inline-block;">Running Death</h2>            
+
+        <div style="display: inline-block; float: right; ">
+            <div class=" button-prev button to-class-selection">
+                <span class="btnText">выбрать класс</span>
+                <div class="btnTwo">
+                    <span class="btnText2"><
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+    <div class="centerText">
+        <div class="row rowF">
+            <p class="text-for-question">На какой спек мага нужен БИС-лист ?</p>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="button amage"><span>Тайная магия</span></div>
+            </div>
+            <div class="col-sm-6 ">
+                <div class="button fmage"><span>огонь</span></div>
+            </div>
+        </div>
+        <footer>
+                <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+                <p class="RD">🆁🆄🅽🅽🅸🅽🅶 🅳🅴🅰🆃🅷</p>
+                <p style="display: inline-block; float: right; ">by OXPA</p>
+        </footer>
+    </div>
+</div>
+
+
+                                                            <!-- ПРИСТ -->
+<div class="mainDiv" id="prist" hidden>
+        <div class="row rowF">
+            <h2 style="display: inline-block;">Running Death</h2>            
+
+        <div style="display: inline-block; float: right; ">
+            <div class=" button-prev button to-class-selection">
+                <span class="btnText">выбрать класс</span>
+                <div class="btnTwo">
+                    <span class="btnText2"><
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+    <div class="centerText">
+        <div class="row rowF">
+            <p class="text-for-question">На какой спек жреца нужен БИС-лист ?</p>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="button shp"><span>тёмная магия</span></div>
+            </div>
+            <div class="col-sm-4 ">
+                <div class="button dc"><span>послушание</span></div>
+            </div>
+            <div class="col-sm-4 ">
+                <div class="button hprist"><span>свет</span></div>
+            </div>
+        </div>
+        <footer>
+                <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+                <p class="RD">🆁🆄🅽🅽🅸🅽🅶 🅳🅴🅰🆃🅷</p>
+                <p style="display: inline-block; float: right; ">by OXPA</p>
+        </footer>
+    </div>
+</div>
+
+
+                                                            <!-- ЛОК -->
+<div class="mainDiv" id="lock" hidden>
+        <div class="row rowF">
+            <h2 style="display: inline-block;">Running Death</h2>            
+
+        <div style="display: inline-block; float: right; ">
+            <div class=" button-prev button to-class-selection">
+                <span class="btnText">выбрать класс</span>
+                <div class="btnTwo">
+                    <span class="btnText2"><
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+    <div class="centerText">
+        <div class="row rowF">
+            <p class="text-for-question">На какой спек чернокниника нужен БИС-лист ?</p>
+        </div>
+        <!-- ТКАНЬ -->
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="button dlock"><span>Разрушение</span></div>
+            </div>
+            <div class="col-sm-4">
+              <div class="button dmlock"><span>Демонология</span></div>
+          </div>
+          <div class="col-sm-4">
+            <div class="button alock"><span>Колдовство</span></div>
+        </div>
+
+        </div>
+        <footer>
+                <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+                <p class="RD">🆁🆄🅽🅽🅸🅽🅶 🅳🅴🅰🆃🅷</p>
+                <p style="display: inline-block; float: right; ">by OXPA</p>
+        </footer>
+    </div>
+</div>
+
+                                                              <!-- ДРУ -->
+<div class="mainDiv" id="dru" hidden>
+        <div class="row rowF">
+            <h2 style="display: inline-block;">Running Death</h2>            
+
+        <div style="display: inline-block; float: right; ">
+            <div class=" button-prev button to-class-selection">
+                <span class="btnText">выбрать класс</span>
+                <div class="btnTwo">
+                    <span class="btnText2"><
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+    <div class="centerText">
+        <div class="row rowF">
+            <p class="text-for-question">На какой спек друида нужен БИС-лист ?</p>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="button misha"><span>Медведь</span></div>
+            </div>
+            <div class="col-sm-3">
+                <div class="button cat"><span>Кот</span></div>
+            </div>
+            <div class="col-sm-3">
+                <div class="button balance"><span>баланс</span></div>
+            </div>
+            <div class="col-sm-3">
+                <div class="button rdru"><span>исцеление</span></div>
+            </div>
+
+        </div>
+        <footer>
+                <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+                <p class="RD">🆁🆄🅽🅽🅸🅽🅶 🅳🅴🅰🆃🅷</p>
+                <p style="display: inline-block; float: right; ">by OXPA</p>
+        </footer>
+    </div>
+</div>
+
+                                                              <!-- rog -->
+<div class="mainDiv" id="rog" hidden>
+        <div class="row rowF">
+            <h2 style="display: inline-block;">Running Death</h2>            
+
+        <div style="display: inline-block; float: right; ">
+            <div class=" button-prev button to-class-selection">
+                <span class="btnText">выбрать класс</span>
+                <div class="btnTwo">
+                    <span class="btnText2"><
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+    <div class="centerText">
+        <div class="row rowF">
+            <p class="text-for-question">На какой спек разбойника нужен БИС-лист ?</p>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="button crog"><span>Бой</span></div>
+            </div>
+
+
+        </div>
+        <footer>
+                <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+                <p class="RD">🆁🆄🅽🅽🅸🅽🅶 🅳🅴🅰🆃🅷</p>
+                <p style="display: inline-block; float: right; ">by OXPA</p>
+        </footer>
+    </div>
+</div>
+
+                                                              <!-- hunt -->
+<div class="mainDiv" id="hunt" hidden>
+        <div class="row rowF">
+            <h2 style="display: inline-block;">Running Death</h2>            
+
+        <div style="display: inline-block; float: right; ">
+            <div class=" button-prev button to-class-selection">
+                <span class="btnText">выбрать класс</span>
+                <div class="btnTwo">
+                    <span class="btnText2"><
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+    <div class="centerText">
+        <div class="row rowF">
+            <p class="text-for-question">На какой спек охотника нужен БИС-лист ?</p>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="button mm"><span>Стрельба</span></div>
+            </div>
+
+
+        </div>
+        <footer>
+                <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+                <p class="RD">🆁🆄🅽🅽🅸🅽🅶 🅳🅴🅰🆃🅷</p>
+                <p style="display: inline-block; float: right; ">by OXPA</p>
+        </footer>
+    </div>
+</div>
+
+                                                            <!-- ШАМ -->
+<div class="mainDiv" id="sham" hidden>
+        <div class="row rowF">
+            <h2 style="display: inline-block;">Running Death</h2>            
+
+        <div style="display: inline-block; float: right; ">
+            <div class=" button-prev button to-class-selection">
+                <span class="btnText">выбрать класс</span>
+                <div class="btnTwo">
+                    <span class="btnText2"><
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+    <div class="centerText">
+        <div class="row rowF">
+            <p class="text-for-question">На какой спек шамана нужен БИС-лист ?</p>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="button enh"><span>Совершенсвто</span></div>
+            </div>
+            <div class="col-sm-4 ">
+                <div class="button el"><span>Покорение стихий</span></div>
+            </div>
+            <div class="col-sm-4 ">
+                <div class="button rsham"><span>исцеление</span></div>
+            </div>
+        </div>
+        <footer>
+                <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+                <p class="RD">🆁🆄🅽🅽🅸🅽🅶 🅳🅴🅰🆃🅷</p>
+                <p style="display: inline-block; float: right; ">by OXPA</p>
+        </footer>
+    </div>
+</div>
+
+                                                            <!-- WAR -->
+<div class="mainDiv" id="war" hidden>
+        <div class="row rowF">
+            <h2 style="display: inline-block;">Running Death</h2>            
+
+        <div style="display: inline-block; float: right; ">
+            <div class=" button-prev button to-class-selection">
+                <span class="btnText">выбрать класс</span>
+                <div class="btnTwo">
+                    <span class="btnText2"><
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+    <div class="centerText">
+        <div class="row rowF">
+            <p class="text-for-question">На какой спек воина нужен БИС-лист ?</p>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="button fwar"><span>Неистовство</span></div>
+            </div>
+            <div class="col-sm-6 ">
+                <div class="button pwar"><span>Защита</span></div>
+            </div>
+        </div>
+        <footer>
+                <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+                <p class="RD">🆁🆄🅽🅽🅸🅽🅶 🅳🅴🅰🆃🅷</p>
+                <p style="display: inline-block; float: right; ">by OXPA</p>
+        </footer>
+    </div>
+</div>
+
+                                                            <!-- PAL -->
+<div class="mainDiv" id="pal" hidden>
+        <div class="row rowF">
+            <h2 style="display: inline-block;">Running Death</h2>            
+
+        <div style="display: inline-block; float: right; ">
+            <div class=" button-prev button to-class-selection">
+                <span class="btnText">выбрать класс</span>
+                <div class="btnTwo">
+                    <span class="btnText2"><
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+    <div class="centerText">
+        <div class="row rowF">
+            <p class="text-for-question">На какой спек паладина нужен БИС-лист ?</p>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="button hpal"><span>Свет</span></div>
+            </div>
+            <div class="col-sm-4 ">
+                <div class="button ppal"><span>защита</span></div>
+            </div>
+            <div class="col-sm-4 ">
+                <div class="button rpal"><span>воздаяние</span></div>
+            </div>
+        </div>
+        <footer>
+                <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+                <p class="RD">🆁🆄🅽🅽🅸🅽🅶 🅳🅴🅰🆃🅷</p>
+                <p style="display: inline-block; float: right; ">by OXPA</p>
+        </footer>
+    </div>
+</div>
+
+                                                            <!-- DK -->
+<div class="mainDiv" id="dk" hidden>
+        <div class="row rowF">
+            <h2 style="display: inline-block;">Running Death</h2>            
+
+        <div style="display: inline-block; float: right; ">
+            <div class=" button-prev button to-class-selection">
+                <span class="btnText">выбрать класс</span>
+                <div class="btnTwo">
+                    <span class="btnText2"><
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+    <div class="centerText">
+        <div class="row rowF">
+            <p class="text-for-question">На какой спек рыцаря смерти нужен БИС-лист ?</p>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="button bdk"><span>кровь (танк)</span></div>
+            </div>
+            <div class="col-sm-4 ">
+                <div class="button fdk"><span>лёд</span></div>
+            </div>
+            <div class="col-sm-4 ">
+                <div class="button udk"><span>нечестивость</span></div>
+            </div>
+        </div>
+        <footer>
+                <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+                <p class="RD">🆁🆄🅽🅽🅸🅽🅶 🅳🅴🅰🆃🅷</p>
+                <p style="display: inline-block; float: right; ">by OXPA</p>
+        </footer>
+    </div>
+</div>
+
+
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+
+
+                                                            <!-- amage -->
+<div class="mainDiv" id="amage" hidden>
+        <div class="row rowF">
+            <h2 style="display: inline-block;">Running Death</h2>
+      
+            <div style="display: inline-block; float: right; ">
+              <div class=" button-prev button to-class-selection-mage">
+                <span class="btnText">выбрать спек</span>
+                <div class="btnTwo">
+                  <span class="btnText2"><
+                  </span>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+          <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+          <div class="centerText">
+            <div class="row rowF">
+              <p class="text-for-question">ТАЙНАЯ МАГИЯ</p>
+            </div>
+      
+            <div class="row" id='amageContent'>
+            </div>
+      
+      
+            <footer>
+              <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+              <p class="RD">🆁🆄🅽🅽🅸🅽🅶 🅳🅴🅰🆃🅷</p>
+              <p style="display: inline-block; float: right; ">by OXPA</p>
+            </footer>
+      </div>
+</div>
+
+                                                            <!-- fmage -->
+<div class="mainDiv" id="fmage" hidden>
+        <div class="row rowF">
+            <h2 style="display: inline-block;">Running Death</h2>
+      
+            <div style="display: inline-block; float: right; ">
+              <div class=" button-prev button to-class-selection-mage">
+                <span class="btnText">выбрать спек</span>
+                <div class="btnTwo">
+                  <span class="btnText2"><
+                  </span>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+          <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+          <div class="centerText">
+            <div class="row rowF">
+              <p class="text-for-question">ОГОНЬ</p>
+            </div>
+      
+            <div class="row" id="fmageContent">
+            
+            </div>
+      
+      
+            <footer>
+              <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+              <p class="RD">🆁🆄🅽🅽🅸🅽🅶 🅳🅴🅰🆃🅷</p>
+              <p style="display: inline-block; float: right; ">by OXPA</p>
+            </footer>
+      </div>
+</div>
+
+                                                            <!-- shp -->
+<div class="mainDiv" id="shp" hidden>
+        <div class="row rowF">
+            <h2 style="display: inline-block;">Running Death</h2>
+      
+            <div style="display: inline-block; float: right; ">
+              <div class=" button-prev button to-class-selection-prist">
+                <span class="btnText">выбрать спек</span>
+                <div class="btnTwo">
+                  <span class="btnText2"><
+                  </span>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+          <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+          <div class="centerText">
+            <div class="row rowF">
+              <p class="text-for-question">ТЁМНАЯ МАГИЯ</p>
+            </div>
+      
+            <div class="row" id="shpContent">
+            </div>
+      
+      
+            <footer>
+              <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+              <p class="RD">🆁🆄🅽🅽🅸🅽🅶 🅳🅴🅰🆃🅷</p>
+              <p style="display: inline-block; float: right; ">by OXPA</p>
+            </footer>
+      </div>
+</div>
+
+                                                            <!-- dc -->
+<div class="mainDiv" id="dc" hidden>
+        <div class="row rowF">
+            <h2 style="display: inline-block;">Running Death</h2>
+      
+            <div style="display: inline-block; float: right; ">
+              <div class=" button-prev button to-class-selection-prist">
+                <span class="btnText">выбрать спек</span>
+                <div class="btnTwo">
+                  <span class="btnText2"><
+                  </span>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+          <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+          <div class="centerText">
+            <div class="row rowF">
+              <p class="text-for-question">ПОСЛУШАНИЕ</p>
+            </div>
+      
+            <div class="row" id="dcContent">
+
+            </div>
+            
+            <footer>
+              <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+              <p class="RD">🆁🆄🅽🅽🅸🅽🅶 🅳🅴🅰🆃🅷</p>
+              <p style="display: inline-block; float: right; ">by OXPA</p>
+            </footer>
+      </div>
+</div>
+
+                                                            <!-- hprist -->
+<div class="mainDiv" id="hprist" hidden>
+        <div class="row rowF">
+            <h2 style="display: inline-block;">Running Death</h2>
+      
+            <div style="display: inline-block; float: right; ">
+              <div class=" button-prev button to-class-selection-prist">
+                <span class="btnText">выбрать спек</span>
+                <div class="btnTwo">
+                  <span class="btnText2"><
+                  </span>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+          <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+          <div class="centerText">
+            <div class="row rowF">
+              <p class="text-for-question">СВЕТ</p>
+            </div>
+      
+            <div class="row" id= "hpristContent" >
+            </div>
+            
+            <footer>
+              <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+              <p class="RD">🆁🆄🅽🅽🅸🅽🅶 🅳🅴🅰🆃🅷</p>
+              <p style="display: inline-block; float: right; ">by OXPA</p>
+            </footer>
+      </div>
+</div>
+
+                                                            <!-- alock -->
+<div class="mainDiv" id="alock" hidden>
+        <div class="row rowF">
+            <h2 style="display: inline-block;">Running Death</h2>
+      
+            <div style="display: inline-block; float: right; ">
+              <div class=" button-prev button to-class-selection-lock">
+                <span class="btnText">выбрать спек</span>
+                <div class="btnTwo">
+                  <span class="btnText2"><
+                  </span>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+          <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+          <div class="centerText">
+            <div class="row rowF">
+              <p class="text-for-question"> КОЛДОВСТВО</p>
+            </div>
+      
+            <div class="row" id="alockContent">
+            </div>
+            
+            <footer>
+              <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+              <p class="RD">🆁🆄🅽🅽🅸🅽🅶 🅳🅴🅰🆃🅷</p>
+              <p style="display: inline-block; float: right; ">by OXPA</p>
+            </footer>
+      </div>
+</div>
+                                                            <!-- dmlock -->
+<div class="mainDiv" id="dmlock" hidden>
+        <div class="row rowF">
+            <h2 style="display: inline-block;">Running Death</h2>
+      
+            <div style="display: inline-block; float: right; ">
+              <div class=" button-prev button to-class-selection-lock">
+                <span class="btnText">выбрать спек</span>
+                <div class="btnTwo">
+                  <span class="btnText2"><
+                  </span>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+          <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+          <div class="centerText">
+            <div class="row rowF">
+              <p class="text-for-question">ДЕМОНОЛОГИЯ</p>
+            </div>
+      
+            <div class="row" id="dmlockContent">
+            </div>
+            
+            <footer>
+              <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+              <p class="RD">🆁🆄🅽🅽🅸🅽🅶 🅳🅴🅰🆃🅷</p>
+              <p style="display: inline-block; float: right; ">by OXPA</p>
+            </footer>
+      </div>
+</div>
+                                                            <!-- dlock -->
+<div class="mainDiv" id="dlock" hidden>
+        <div class="row rowF">
+            <h2 style="display: inline-block;">Running Death</h2>
+      
+            <div style="display: inline-block; float: right; ">
+              <div class=" button-prev button to-class-selection-lock">
+                <span class="btnText">выбрать спек</span>
+                <div class="btnTwo">
+                  <span class="btnText2"><
+                  </span>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+          <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+          <div class="centerText">
+            <div class="row rowF">
+              <p class="text-for-question">РАЗРУШЕНИЕ</p>
+            </div>
+      
+            <div class="row" id="dlockContent">
+            </div>
+            
+            <footer>
+              <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+              <p class="RD">🆁🆄🅽🅽🅸🅽🅶 🅳🅴🅰🆃🅷</p>
+              <p style="display: inline-block; float: right; ">by OXPA</p>
+            </footer>
+      </div>
+</div>
+
+                                                            <!-- misha -->
+<div class="mainDiv" id="misha" hidden>
+        <div class="row rowF">
+            <h2 style="display: inline-block;">Running Death</h2>
+      
+            <div style="display: inline-block; float: right; ">
+              <div class=" button-prev button to-class-selection-dru">
+                <span class="btnText">выбрать спек</span>
+                <div class="btnTwo">
+                  <span class="btnText2"><
+                  </span>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+          <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+          <div class="centerText">
+            <div class="row rowF">
+              <p class="text-for-question">МЕДВЕДЬ</p>
+            </div>
+      
+            <div class="row" id= "bearContent" >
+              
+            </div>
+            
+            <footer>
+              <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+              <p class="RD">🆁🆄🅽🅽🅸🅽🅶 🅳🅴🅰🆃🅷</p>
+              <p style="display: inline-block; float: right; ">by OXPA</p>
+            </footer>
+      </div>
+</div>
+
+                                                            <!-- cat -->
+<div class="mainDiv" id="cat" hidden>
+        <div class="row rowF">
+            <h2 style="display: inline-block;">Running Death</h2>
+      
+            <div style="display: inline-block; float: right; ">
+              <div class=" button-prev button to-class-selection-dru">
+                <span class="btnText">выбрать спек</span>
+                <div class="btnTwo">
+                  <span class="btnText2"><
+                  </span>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+          <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+          <div class="centerText">
+            <div class="row rowF">
+              <p class="text-for-question">КОТ</p>
+            </div>
+      
+            <div class="row" id="catContent">
+ 
+            </div>
+            
+            <footer>
+              <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+              <p class="RD">🆁🆄🅽🅽🅸🅽🅶 🅳🅴🅰🆃🅷</p>
+              <p style="display: inline-block; float: right; ">by OXPA</p>
+            </footer>
+      </div>
+</div>
+
+                                                            <!-- balance -->
+<div class="mainDiv" id="balance" hidden>
+        <div class="row rowF">
+            <h2 style="display: inline-block;">Running Death</h2>
+      
+            <div style="display: inline-block; float: right; ">
+              <div class=" button-prev button to-class-selection-dru">
+                <span class="btnText">выбрать спек</span>
+                <div class="btnTwo">
+                  <span class="btnText2"><
+                  </span>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+          <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+          <div class="centerText">
+            <div class="row rowF">
+              <p class="text-for-question">СОВА</p>
+            </div>
+      
+            <div class="row" id = "owlContent"> 
+            </div>
+            
+            <footer>
+              <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+              <p class="RD">🆁🆄🅽🅽🅸🅽🅶 🅳🅴🅰🆃🅷</p>
+              <p style="display: inline-block; float: right; ">by OXPA</p>
+            </footer>
+      </div>
+</div>
+
+                                                            <!-- rdru -->
+<div class="mainDiv" id="rdru" hidden>
+        <div class="row rowF">
+            <h2 style="display: inline-block;">Running Death</h2>
+      
+            <div style="display: inline-block; float: right; ">
+              <div class=" button-prev button to-class-selection-dru">
+                <span class="btnText">выбрать спек</span>
+                <div class="btnTwo">
+                  <span class="btnText2"><
+                  </span>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+          <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+          <div class="centerText">
+            <div class="row rowF">
+              <p class="text-for-question">ДЕРЕВО</p>
+            </div>
+      
+            <div class="row"  id = "rdruContent">
+
+            </div>
+            
+            <footer>
+              <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+              <p class="RD">🆁🆄🅽🅽🅸🅽🅶 🅳🅴🅰🆃🅷</p>
+              <p style="display: inline-block; float: right; ">by OXPA</p>
+            </footer>
+      </div>
+</div>
+
+                                                            <!-- crog -->
+<div class="mainDiv" id="crog" hidden>
+        <div class="row rowF">
+            <h2 style="display: inline-block;">Running Death</h2>
+      
+            <div style="display: inline-block; float: right; ">
+              <div class=" button-prev button to-class-selection-rog">
+                <span class="btnText">выбрать спек</span>
+                <div class="btnTwo">
+                  <span class="btnText2"><
+                  </span>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+          <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+          <div class="centerText">
+            <div class="row rowF">
+              <p class="text-for-question">БОЙ</p>
+            </div>
+      
+            <div class="row" id ='crogContent'>
+            </div>
+            
+            <footer>
+              <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+              <p class="RD">🆁🆄🅽🅽🅸🅽🅶 🅳🅴🅰🆃🅷</p>
+              <p style="display: inline-block; float: right; ">by OXPA</p>
+            </footer>
+      </div>
+</div>
+
+                                                            <!-- hunt -->
+<div class="mainDiv" id="mm" hidden>
+        <div class="row rowF">
+            <h2 style="display: inline-block;">Running Death</h2>
+      
+            <div style="display: inline-block; float: right; ">
+              <div class=" button-prev button to-class-selection-hunt">
+                <span class="btnText">выбрать спек</span>
+                <div class="btnTwo">
+                  <span class="btnText2"><
+                  </span>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+          <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+          <div class="centerText">
+            <div class="row rowF">
+              <p class="text-for-question">СТРЕЛЬБА</p>
+            </div>
+      
+            <div class="row" id = "mmContent">
+            </div>
+            
+            <footer>
+              <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+              <p class="RD">🆁🆄🅽🅽🅸🅽🅶 🅳🅴🅰🆃🅷</p>
+              <p style="display: inline-block; float: right; ">by OXPA</p>
+            </footer>
+      </div>
+</div>
+                                                            <!-- enh -->
+<div class="mainDiv" id="enh" hidden>
+        <div class="row rowF">
+            <h2 style="display: inline-block;">Running Death</h2>
+      
+            <div style="display: inline-block; float: right; ">
+              <div class=" button-prev button to-class-selection-sham">
+                <span class="btnText">выбрать спек</span>
+                <div class="btnTwo">
+                  <span class="btnText2"><
+                  </span>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+          <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+          <div class="centerText">
+            <div class="row rowF">
+              <p class="text-for-question">СОВЕРШЕНСТВО</p>
+            </div>
+      
+            <div class="row" id = "enhContent">
+            </div>
+            
+            <footer>
+              <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+              <p class="RD">🆁🆄🅽🅽🅸🅽🅶 🅳🅴🅰🆃🅷</p>
+              <p style="display: inline-block; float: right; ">by OXPA</p>
+            </footer>
+      </div>
+</div>
+
+                                                            <!-- el -->
+<div class="mainDiv" id="el" hidden>
+        <div class="row rowF">
+            <h2 style="display: inline-block;">Running Death</h2>
+      
+            <div style="display: inline-block; float: right; ">
+              <div class=" button-prev button to-class-selection-sham">
+                <span class="btnText">выбрать спек</span>
+                <div class="btnTwo">
+                  <span class="btnText2"><
+                  </span>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+          <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+          <div class="centerText">
+            <div class="row rowF">
+              <p class="text-for-question">ПОКОРЕНИЕ СТИХИЙ</p>
+            </div>
+      
+            <div class="row" id='elContent'>
+            </div>
+            
+            <footer>
+              <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+              <p class="RD">🆁🆄🅽🅽🅸🅽🅶 🅳🅴🅰🆃🅷</p>
+              <p style="display: inline-block; float: right; ">by OXPA</p>
+            </footer>
+      </div>
+</div>
+
+                                                            <!-- rsham -->
+<div class="mainDiv" id="rsham" hidden>
+        <div class="row rowF">
+            <h2 style="display: inline-block;">Running Death</h2>
+      
+            <div style="display: inline-block; float: right; ">
+              <div class=" button-prev button to-class-selection-sham">
+                <span class="btnText">выбрать спек</span>
+                <div class="btnTwo">
+                  <span class="btnText2"><
+                  </span>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+          <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+          <div class="centerText">
+            <div class="row rowF">
+              <p class="text-for-question">ИСЦЕЛЕНИЕ</p>
+            </div>
+      
+            <div class="row" id = "rshamContent">
+            
+            </div>
+            
+            <footer>
+              <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+              <p class="RD">🆁🆄🅽🅽🅸🅽🅶 🅳🅴🅰🆃🅷</p>
+              <p style="display: inline-block; float: right; ">by OXPA</p>
+            </footer>
+      </div>
+</div>
+
+                                                            <!-- fwar -->
+<div class="mainDiv" id="fwar" hidden>
+        <div class="row rowF">
+            <h2 style="display: inline-block;">Running Death</h2>
+      
+            <div style="display: inline-block; float: right; ">
+              <div class=" button-prev button to-class-selection-war">
+                <span class="btnText">выбрать спек</span>
+                <div class="btnTwo">
+                  <span class="btnText2"><
+                  </span>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+          <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+          <div class="centerText">
+            <div class="row rowF">
+              <p class="text-for-question">НЕИСТОВСТВО</p>
+            </div>
+      
+            <div class="row" id= 'fwarContent'>
+            </div>
+            
+            <footer>
+              <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+              <p class="RD">🆁🆄🅽🅽🅸🅽🅶 🅳🅴🅰🆃🅷</p>
+              <p style="display: inline-block; float: right; ">by OXPA</p>
+            </footer>
+      </div>
+</div>
+
+                                                            <!-- pwar -->
+<div class="mainDiv" id="pwar" hidden>
+        <div class="row rowF">
+            <h2 style="display: inline-block;">Running Death</h2>
+      
+            <div style="display: inline-block; float: right; ">
+              <div class=" button-prev button to-class-selection-war">
+                <span class="btnText">выбрать спек</span>
+                <div class="btnTwo">
+                  <span class="btnText2"><
+                  </span>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+          <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+          <div class="centerText">
+            <div class="row rowF">
+              <p class="text-for-question">ЗАЩИТА</p>
+            </div>
+      
+            <div class="row" id = 'pwarContent'>
+            </div>
+            
+            <footer>
+              <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+              <p class="RD">🆁🆄🅽🅽🅸🅽🅶 🅳🅴🅰🆃🅷</p>
+              <p style="display: inline-block; float: right; ">by OXPA</p>
+            </footer>
+      </div>
+</div>
+
+                                                            <!-- hpal -->
+<div class="mainDiv" id="hpal" hidden>
+        <div class="row rowF">
+            <h2 style="display: inline-block;">Running Death</h2>
+      
+            <div style="display: inline-block; float: right; ">
+              <div class=" button-prev button to-class-selection-pal">
+                <span class="btnText">выбрать спек</span>
+                <div class="btnTwo">
+                  <span class="btnText2"><
+                  </span>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+          <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+          <div class="centerText">
+            <div class="row rowF">
+              <p class="text-for-question">СВЕТ</p>
+            </div>
+      
+            <div class="row" id = 'hpalContent' >
+           
+            </div>
+            
+            <footer>
+              <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+              <p class="RD">🆁🆄🅽🅽🅸🅽🅶 🅳🅴🅰🆃🅷</p>
+              <p style="display: inline-block; float: right; ">by OXPA</p>
+            </footer>
+      </div>
+</div>
+
+                                                            <!-- ppal -->
+<div class="mainDiv" id="ppal" hidden>
+        <div class="row rowF">
+            <h2 style="display: inline-block;">Running Death</h2>
+      
+            <div style="display: inline-block; float: right; ">
+              <div class=" button-prev button to-class-selection-pal">
+                <span class="btnText">выбрать спек</span>
+                <div class="btnTwo">
+                  <span class="btnText2"><
+                  </span>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+          <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+          <div class="centerText">
+            <div class="row rowF">
+              <p class="text-for-question">ЗАЩИТА</p>
+            </div>
+      
+            <div class="row" id = 'ppalContent' >
+              
+            </div>
+            
+            <footer>
+              <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+              <p class="RD">🆁🆄🅽🅽🅸🅽🅶 🅳🅴🅰🆃🅷</p>
+              <p style="display: inline-block; float: right; ">by OXPA</p>
+            </footer>
+      </div>
+</div>
+
+                                                            <!-- rpal -->
+<div class="mainDiv" id="rpal" hidden>
+        <div class="row rowF">
+            <h2 style="display: inline-block;">Running Death</h2>
+      
+            <div style="display: inline-block; float: right; ">
+              <div class=" button-prev button to-class-selection-pal">
+                <span class="btnText">выбрать спек</span>
+                <div class="btnTwo">
+                  <span class="btnText2"><
+                  </span>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+          <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+          <div class="centerText">
+            <div class="row rowF">
+              <p class="text-for-question">ВОЗДАЯНИЕ</p>
+            </div>
+      
+            <div class="row" id= 'rpalContent'>
+            </div>
+            
+            <footer>
+              <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+              <p class="RD">🆁🆄🅽🅽🅸🅽🅶 🅳🅴🅰🆃🅷</p>
+              <p style="display: inline-block; float: right; ">by OXPA</p>
+            </footer>
+      </div>
+</div>
+
+                                                            <!-- bdk -->
+<div class="mainDiv" id="bdk" hidden>
+        <div class="row rowF">
+            <h2 style="display: inline-block;">Running Death</h2>
+      
+            <div style="display: inline-block; float: right; ">
+              <div class=" button-prev button to-class-selection-dk">
+                <span class="btnText">выбрать спек</span>
+                <div class="btnTwo">
+                  <span class="btnText2"><
+                  </span>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+          <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+          <div class="centerText">
+            <div class="row rowF">
+              <p class="text-for-question">КРОВЬ (ТАНК)</p>
+            </div>
+      
+            <div class="row" id = 'bdkContent'>
+            </div>
+            
+            <footer>
+              <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+              <p class="RD">🆁🆄🅽🅽🅸🅽🅶 🅳🅴🅰🆃🅷</p>
+              <p style="display: inline-block; float: right; ">by OXPA</p>
+            </footer>
+      </div>
+</div>
+
+                                                            <!-- fdk -->
+<div class="mainDiv" id="fdk" hidden>
+        <div class="row rowF">
+            <h2 style="display: inline-block;">Running Death</h2>
+      
+            <div style="display: inline-block; float: right; ">
+              <div class=" button-prev button to-class-selection-dk">
+                <span class="btnText">выбрать спек</span>
+                <div class="btnTwo">
+                  <span class="btnText2"><
+                  </span>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+          <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+          <div class="centerText">
+            <div class="row rowF">
+              <p class="text-for-question">ЛЁД</p>
+            </div>
+      
+            <div class="row" id = 'fdkContent'>
+            </div>
+            
+            <footer>
+              <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+              <p class="RD">🆁🆄🅽🅽🅸🅽🅶 🅳🅴🅰🆃🅷</p>
+              <p style="display: inline-block; float: right; ">by OXPA</p>
+            </footer>
+      </div>
+</div>
+
+                                                            <!-- udk -->
+<div class="mainDiv" id="udk" hidden>
+        <div class="row rowF">
+            <h2 style="display: inline-block;">Running Death</h2>
+      
+            <div style="display: inline-block; float: right; ">
+              <div class=" button-prev button to-class-selection-dk">
+                <span class="btnText">выбрать спек</span>
+                <div class="btnTwo">
+                  <span class="btnText2"><
+                  </span>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+          <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+          <div class="centerText">
+            <div class="row rowF">
+              <p class="text-for-question">НЕЧЕСТИВОСТЬ</p>
+            </div>
+      
+            <div class="row" id = 'udkContent'>
+            </div>
+            
+            <footer>
+              <hr style="border: 0; border-top: 1px solid rgb(255, 255, 255);">
+              <p class="RD">🆁🆄🅽🅽🅸🅽🅶 🅳🅴🅰🆃🅷</p>
+              <p style="display: inline-block; float: right; ">by OXPA</p>
+            </footer>
+      </div>
+</div>
+
+<div style="display: none;"> 
+</body>
+
+</html>

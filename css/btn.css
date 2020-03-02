@@ -1,0 +1,340 @@
+.BTN-container{
+    position: absolute;
+    bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    margin-top:5%;
+    margin-left: auto;
+    margin-right: auto;
+	width: fit-content;
+	height:auto;
+	font-size: 42px;
+}
+@media (max-width: 768px) {
+	.BTN-container{
+	  font-size: 28px;
+	}
+  }
+  
+  @media (max-width: 480px) {
+	.BTN-container {
+	  font-size: 20px;
+	  letter-spacing: 0.05em;
+	}
+  }
+  
+  @media (max-width: 320px) {
+	.BTN-container {
+	  font-size: 18px;
+	  letter-spacing: 0.05em;
+	}
+  }
+
+  .BIS-btn-link:active{
+	color: rgba(0,0,0,0);
+	background-color:  rgba(0,0,0,0);
+  }
+	button.BIS-btn.BIS-btn{
+		width:auto;
+		background: linear-gradient(to left top, rgba(85, 103, 161, 0.6),rgba(91, 44, 168, 0.6));
+		border-style: none;
+		color:#fff;
+		font-size: 19px;
+		letter-spacing: 3px;
+		font-family: 'Lato';
+		font-weight: 600;
+		outline: none;
+		cursor: pointer;
+		position: relative;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		padding-left: 45px;
+		padding-right: 50px;
+		overflow: hidden;
+		transition: all .5s;
+		box-shadow: 0px 1px 2px rgba(0,0,0,.2);
+	}
+	button.BIS-btn span{
+		position: absolute;
+		display: block;
+	}
+	button.BIS-btn span:nth-child(1){
+		height: 3px;
+		width:200px;
+		top:0px;
+		left:-200px;
+		background: linear-gradient(to right, rgba(0,0,0,0), #00fff2);
+		border-top-right-radius: 1px;
+		border-bottom-right-radius: 1px;
+		animation: span1 2s linear infinite;
+		animation-delay: 1s;
+	}
+	
+	@keyframes span1{
+		0%{
+			left:-200px
+		}
+		100%{
+			left:200px;
+		}
+	}
+	button.BIS-btn span:nth-child(2){
+		height: 70px;
+		width: 3px;
+		top:-70px;
+		right:0px;
+		background: linear-gradient(to bottom, rgba(0,0,0,0), #00fff2);
+		border-bottom-left-radius: 1px;
+		border-bottom-right-radius: 1px;
+		animation: span2 2s linear infinite;
+		animation-delay: 2s;
+	}
+	@keyframes span2{
+		0%{
+			top:-70px;
+		}
+		100%{
+			top:70px;
+		}
+	}
+	button.BIS-btn span:nth-child(3){
+		height:3px;
+		width:200px;
+		right:-200px;
+		bottom: 0px;
+		background: linear-gradient(to left, rgba(0,0,0,0), #00fff2);
+		border-top-left-radius: 1px;
+		border-bottom-left-radius: 1px;
+		animation: span3 2s linear infinite;
+		animation-delay: 3s;
+	}
+	@keyframes span3{
+		0%{
+			right:-200px;
+		}
+		100%{
+			right: 200px;
+		}
+	}
+	
+	button.BIS-btn span:nth-child(4){
+		height:70px;
+		width:3px;
+		bottom:-70px;
+		left:0px;
+		background: linear-gradient(to top, rgba(0,0,0,0), #00fff2);
+		border-top-right-radius: 1px;
+		border-top-left-radius: 1px;
+		animation: span4 2s linear infinite;
+		animation-delay: 4s;
+	}
+	@keyframes span4{
+		0%{
+			bottom: -70px;
+		}
+		100%{
+			bottom:70px;
+		}
+	}
+	
+	button.BIS-btn:hover{
+		transition: all .5s;
+		transform: rotate(-3deg) scale(1.1);
+		box-shadow: 0px 3px 5px rgba(0,0,0,.4);
+	}
+	button.BIS-btn:hover span{
+		animation-play-state: paused;
+	}
+	
+
+/* ****************************** ТАКТИКА ******************************* */
+button.tactics-btn.tactics-btn{
+    width:auto;
+    background: linear-gradient(to left top, rgba(4, 18, 95, 0.6),rgba(0, 183, 255, 0.6));
+	border-style: none;
+	color:#fff;
+	font-size: 19px;
+	letter-spacing: 3px;
+	font-family: 'Lato';
+	font-weight: 600;
+	outline: none;
+	cursor: pointer;
+	position: relative;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 45px;
+	padding-right: 50px;
+	overflow: hidden;
+	transition: all .5s;
+	box-shadow: 0px 1px 2px rgba(0,0,0,.2);
+}
+button.tactics-btn span{
+    position: absolute;
+    display: block;
+}
+button.tactics-btn span:nth-child(1){
+    height: 3px;
+    width:200px;
+    top:0px;
+    left:-200px;
+    background: linear-gradient(to right, rgba(0,0,0,0), #00fff2);
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px;
+    animation: span1 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes span1{
+    0%{
+        left:-200px
+    }
+    100%{
+        left:200px;
+    }
+}
+button.tactics-btn span:nth-child(2){
+    height: 70px;
+    width: 3px;
+    top:-70px;
+    right:0px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0), #00fff2);
+    border-bottom-left-radius: 1px;
+    border-bottom-right-radius: 1px;
+    animation: span2 2s linear infinite;
+    animation-delay: 2s;
+}
+@keyframes span2{
+    0%{
+        top:-70px;
+    }
+    100%{
+        top:70px;
+    }
+}
+button.tactics-btn span:nth-child(3){
+    height:3px;
+    width:200px;
+    right:-200px;
+    bottom: 0px;
+    background: linear-gradient(to left, rgba(0,0,0,0), #00fff2);
+    border-top-left-radius: 1px;
+    border-bottom-left-radius: 1px;
+    animation: span3 2s linear infinite;
+    animation-delay: 3s;
+}
+@keyframes span3{
+    0%{
+        right:-200px;
+    }
+    100%{
+        right: 200px;
+    }
+}
+
+button.tactics-btn span:nth-child(4){
+    height:70px;
+    width:3px;
+    bottom:-70px;
+    left:0px;
+    background: linear-gradient(to top, rgba(0,0,0,0), #00fff2);
+    border-top-right-radius: 1px;
+    border-top-left-radius: 1px;
+    animation: span4 2s linear infinite;
+    animation-delay: 4s;
+}
+@keyframes span4{
+    0%{
+        bottom: -70px;
+    }
+    100%{
+        bottom:70px;
+    }
+}
+
+button.tactics-btn:hover{
+    transition: all .5s;
+    transform: rotate(-3deg) scale(1.1);
+    box-shadow: 0px 3px 5px rgba(0,0,0,.4);
+}
+button.tactics-btn:hover span{
+    animation-play-state: paused;
+}
+
+/* ******************** Двойная кнопка ************************* */
+.double-buttons{
+	text-align:center;
+	display:inline-block;
+	position:relative;
+	border-radius: 100px;
+	width: 100%;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	overflow: hidden;
+  }
+  .double-buttons a{
+	display: inline-block;
+	line-height: 44px;
+	color: #444;
+	text-decoration: none;
+	text-transform: uppercase;
+	width: 100%;
+  }
+
+
+ 
+  .double-buttons .or{
+	position: absolute;
+	display: block;
+	width: 28px;
+	height: 28px;
+	line-height: 24px;
+	background-color: #fff;
+	border:1px solid #444;
+	border-radius:100%;
+	font-style: italic;
+	color: #666;
+	top: 50%;
+	left: 50%;
+	margin-top: -14px;
+	margin-left: -14px;
+	cursor: default;
+  }
+  a.vk{
+	background-color: rgba(6, 143, 255, 0.3);
+	color: #fff;
+	text-shadow:  rgb(14, 14, 236) 0 0 2px;
+  }
+   a.ds{
+	background-color: rgba(105, 5, 219, 0.3);
+	color: #fff;
+	text-shadow:  rgb(14, 14, 236) 0 0 2px;
+  }
+
+
+   a.vk:hover{
+	background-color:rgba(255, 255, 255, 0.8) ;
+	color:rgba(6, 143, 255,1) ;
+  }
+   a.ds:hover{
+	background-color:rgba(255, 255, 255, 0.8) ;
+	color: rgba(87, 5, 219,1);
+  }
+  a:active{
+	background-color: #444;
+	color: #fff;
+  }
+
+  .btn2 {		
+	position: relative;	
+	font-size: 1.4rem;
+	color: var(--inv);
+	letter-spacing: 0.5rem;
+	text-transform: uppercase;
+	transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);	
+	cursor: pointer;
+	user-select: none;
+}
+
