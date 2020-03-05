@@ -1533,7 +1533,7 @@
 
           function h(e) {
             this.img = e
-          }
+          };
            r.prototype = new e, r.prototype.options = {}, r.prototype.getImages = function () {
             this.images = [];
             for (var e = 0, t = this.elements.length; t > e; e++) {
