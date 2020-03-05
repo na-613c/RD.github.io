@@ -1,6 +1,6 @@
 ## Описание
 
-Игровой сайт https://runningdeath.000webhostapp.com/
+Игровой сайт https://runningdeath.000webhostapp.com/ или https://na-613c.github.io/RunningDeath/index.html
 
 ## Использованные технологии 
 
