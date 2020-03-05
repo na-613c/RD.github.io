@@ -1522,7 +1522,7 @@
         }
 
         function r(e, n) {
-          function r(e, n, o) {
+          let r = function(e, n, o) {
             if (!(this instanceof r)) return new r(e, n);
             "string" == typeof e && (e = document.querySelectorAll(e)), this.elements = i(e), this.options = t({}, this.options), "function" == typeof n ? o = n : t(this.options, n), o && this.on("always", o), this.getImages(), s && (this.jqDeferred = new s.Deferred);
             var a = this;
@@ -1534,7 +1534,7 @@
           function h(e) {
             this.img = e
           }
-          var r.prototype = new e, r.prototype.options = {}, r.prototype.getImages = function () {
+           r.prototype = new e, r.prototype.options = {}, r.prototype.getImages = function () {
             this.images = [];
             for (var e = 0, t = this.elements.length; t > e; e++) {
               var n = this.elements[e];
